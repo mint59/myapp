@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, Image} from 'react-native';
+import { View, Image, StyleSheet} from 'react-native';
 import { Container, Content, Form, Item, Input, Label, Button,Text } from 'native-base';
-import Tech from ''
-import { style } from './style'
+import Tech from '../../Images/tech.jpg'
+// import { style } from './style'
 
 export default function Login() {
   const [Username, SetUsername] = React.useState('');
   const [Email, SetEmail] = React.useState('');
-  const classes = style();
+  // const classes = style();
 
   return (
     <Container>
         <Content>
-          <View classname={Usesse}>
+          <View styles={styles.button}>
           <Image source={Tech} style={{width: 80, height: 80}}/>
           </View>
           <Form>
@@ -31,7 +31,7 @@ export default function Login() {
               />
             </Item>
            
-            <View style={styles.button}>
+            <View styles={styles.button}>
             <Button block success>
               <Text>Submit</Text>
             </Button>
@@ -41,3 +41,16 @@ export default function Login() {
       </Container>
   );
 }
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: 70
+    },
+    button: {
+      paddingTop: 50,
+      // width: 100
+    }
+  });

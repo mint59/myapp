@@ -1,17 +1,20 @@
 import React from 'react';
 import { Container, Content, Form, Item, Input, Label, Button, Text } from 'native-base';
-import { View } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+import { View,StyleSheet } from 'react-native';
+// import Style from './style';
+// import Login from '../Login/Login'
 
 export default function ForGot() {
-    const [Password, SetPassword] = React.useState('');
-    const [Confilm, SetConfilm] = React.useState('');
+    const [Password, SetPassword] = React.useState('vgg');
+    const [Confilm, SetConfilm] = React.useState('vvgv');
+    // const Classes = Style();
+    
     return (
         <Container>
             <Content>
                 <Form>
                     <View>
-                        <Text>กรุณากรอก Password ใหม่cccc</Text>
+                        <Text>กรุณากรอก Password ใหม่</Text>
                     </View>
                     <Item floatingLabel>
                         <Label>Password</Label>
@@ -27,10 +30,10 @@ export default function ForGot() {
                             value={Confilm}
                         />
                     </Item>
-
-                    <View>
-                        <Button block success onPress={() => Actions.ForGot()}>
-                            <Text>Submit</Text>
+                    {/* onPress={() => Actions.ForGot()} */}
+                    <View styles={styles.button}>
+                        <Button block success onPress={() => alert("dffff")}>
+                            <Text>  Submit</Text>
                         </Button>
                     </View>
                 </Form>
@@ -39,3 +42,16 @@ export default function ForGot() {
 
     );
 }
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingTop: 70
+    },
+    button: {
+      paddingTop: 50,
+      // width: 100
+    }
+  });
