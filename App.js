@@ -1,15 +1,25 @@
-import React from 'react';
-// import Login from './page/Login/Login';
+import React, { Component } from 'react';
+import Login from './page/Login/Login';
 import ForGot from './page/ForGot/ForGot'
-import { Router, Scene } from 'react-native-router-flux'
+import { NativeRouter, Route, Switch } from "react-router-native";
+// import { createStackNavigator } from '@react-navigation/stack';
 
-const App = () => (
-    <Router>
-       <Scene key="root">
-          <Scene key = "ForGot" component = {ForGot} title = "ForGot" initial = {true} />
-          {/* <Scene key = "Login" component = {Login} title = "Login" /> */}
-       </Scene>
-    </Router>
- )
- export default App
+export default class App extends Component {
 
+   render() {
+      return (
+         // <AppStackNavigator />
+      <NativeRouter>
+        <Switch>
+          <Route exact path="/" component={ForGot} />
+          <Route exact path="/Login" component={Login} />
+        </Switch>
+    </NativeRouter>
+     );
+   }
+
+}
+// const AppStackNavigator = createStackNavigator({
+//    forgot: ForGot,
+//    login: Login
+// });
