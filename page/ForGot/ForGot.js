@@ -1,19 +1,16 @@
 import React from 'react';
 import { Container, Content, Form, Item, Input, Label, Button, Text } from 'native-base';
 import { View,StyleSheet } from 'react-native';
-// import Style from './style';
-// import Login from '../Login/Login'
 
-export default function ForGot() {
-    const [Password, SetPassword] = React.useState('vgg');
-    const [Confilm, SetConfilm] = React.useState('vvgv');
-    // const Classes = Style();
+export default ({history}) => {
+    const [Password, SetPassword] = React.useState('');
+    const [Confilm, SetConfilm] = React.useState('');
     
     return (
         <Container>
             <Content>
                 <Form>
-                    <View>
+                    <View style={styles.container}>
                         <Text>กรุณากรอก Password ใหม่</Text>
                     </View>
                     <Item floatingLabel>
@@ -30,9 +27,8 @@ export default function ForGot() {
                             value={Confilm}
                         />
                     </Item>
-                    {/* onPress={() => Actions.ForGot()} */}
-                    <View styles={styles.button}>
-                        <Button block success onPress={() => alert("dffff")}>
+                    <View style={styles.button}>
+                        <Button block success onPress={() => history.push("/Login")}>
                             <Text>  Submit</Text>
                         </Button>
                     </View>
@@ -52,6 +48,7 @@ const styles = StyleSheet.create({
     },
     button: {
       paddingTop: 50,
-      // width: 100
+      paddingLeft: 20,
+      width: '95%'
     }
   });
