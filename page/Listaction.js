@@ -17,7 +17,7 @@ export default ({ history }) => {
                     <CardItem>
                         <Body>
                             <Text>
-                            //Your text here
+                            //Your ffffffftext here
                             consolc
                             cccc
                             cccc

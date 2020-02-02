@@ -4,8 +4,8 @@ import { Container, Content, Form, Item, Input, Label, Button,Text } from 'nativ
 import Tech from '../../Images/tech.jpg'
 
 export default ({ history }) => {
-  const [Username, SetUsername] = React.useState('');
-  const [Email, SetEmail] = React.useState('');
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
 
   return (
     <Container>
@@ -17,15 +17,16 @@ export default ({ history }) => {
             <Item floatingLabel>
               <Label>Username</Label>
               <Input
-                SetUsername={text => SetUsername(text)}
-                value={Username}
+                onChangeText={username => setUsername(username)}
+                value={username}
               />
             </Item>
             <Item floatingLabel last>
               <Label>Password</Label>
-              <Input 
-                SetEmail={text => SetEmail(text)}
-                value={Email}
+              <Input
+                secureTextEntry={true}
+                onChangeText={password => setPassword(password)}
+                value={password}
               />
             </Item>
            

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import { Container, Header, Content, Card, CardItem, Body, Text, Badge, Grid } from 'native-base';
+import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 import Page from '../components/pages'
 

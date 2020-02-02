@@ -6,6 +6,8 @@ export default ({history}) => {
     const [Password, SetPassword] = React.useState('');
     const [Confilm, SetConfilm] = React.useState('');
     
+
+    
     return (
         <Container>
             <Content>
@@ -16,14 +18,16 @@ export default ({history}) => {
                     <Item floatingLabel>
                         <Label>Password</Label>
                         <Input
-                            SetUsername={text => SetUsername(text)}
+                            secureTextEntry={true}
+                            onChangeText={Password => SetPassword(Password)}
                             value={Password}
                         />
                     </Item>
                     <Item floatingLabel last>
                         <Label>Confilm Password</Label>
                         <Input
-                            SetEmail={text => SetEmail(text)}
+                            secureTextEntry={true}
+                            onChangeText={Confilm => SetConfilm(Confilm)}
                             value={Confilm}
                         />
                     </Item>
